@@ -2,7 +2,7 @@ package org.example.Model;
 
 import java.util.Objects;
 public class Book {
-    private static int nextId = 1;
+    //private static int nextId = 1;
     private int id; // Change from UUID to long
     private String name;
     private double price;
@@ -14,8 +14,8 @@ public class Book {
 
     }
 
-    public Book(String name, double price, int SellerId) {
-        this.id = nextId++;
+    public Book(int id, String name, double price, int SellerId) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.SellerId = SellerId;

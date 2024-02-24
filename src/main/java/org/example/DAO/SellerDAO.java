@@ -14,7 +14,7 @@ public class SellerDAO {
     }
     public void insertSeller(Seller s){
         try{
-            PreparedStatement ps = conn.prepareStatement("insert into " +
+            PreparedStatement ps = conn.prepareStatement("insert into Seller" +
                     "(seller_id, Seller_name) values (?, ?)");
             ps.setInt(1, s.getId());
             ps.setString(2, s.getName());
@@ -49,7 +49,7 @@ public class SellerDAO {
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
                 int Id = rs.getInt("seller_id");
-                String name = rs.getString("name");
+                String name = rs.getString("seller_name");
                 Seller s = new Seller(id, name);
                 return s;
             }else{

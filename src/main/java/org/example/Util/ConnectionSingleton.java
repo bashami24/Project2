@@ -27,7 +27,7 @@ public class ConnectionSingleton {
      * a static object which represents the connection to h2. Because it is static, any DAO interacting
      * with this connection object is referring to the same object.
      */
-    private static Connection connection = null;
+    public static Connection connection = null;
     /**
      * @return an active connection to the database and set up the database tables if this is the first time the
      * Connection has been established
